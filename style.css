@@ -7,6 +7,160 @@
 
     --color-neutral-dark: #28283D;
     --color-neutral-light: #FAFAFA;
+    --color-neutral-mid: #87879D;
+}
 
-    --color-extra: #87879D;
+/* Base */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: var(--color-neutral-dark);
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 900;
+    line-height: 1.12;
+    text-align: center;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.10;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--color-neutral-mid);
+    font-weight: 500;
+    line-height: 1.62;
+    margin: 1.5em 0;
+}
+
+a {
+    color: var(--color-neutral-light);
+    text-decoration: none;
+}
+
+a span {
+    color: #8FE3F9;
+}
+
+/* Layout */
+
+.header {
+    margin: 3em;
+}
+
+section {
+    padding: 0 1.5em;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    width: 110%;
+    position: relative;
+    left: -20px;
+    justify-content: space-between;
+}
+
+.main_title {
+    margin: 1.2em 0 0.6em;
+}
+
+.main_download {
+    background-color: var(--color-base-primary);
+    border-radius: 29px;
+    padding: 1em 3em;
+    display: block;
+    margin: 1em auto;
+    width: 75%;
+}
+
+.main_more_info {
+    background-color: var(--color-base-secondary);
+    border-radius: 29px;
+    padding: 1em 1.75em;
+    display: block;
+    margin: 1em auto;
+    width: 60%;
+}
+
+.features {
+    padding-block: 14.65em 7.5em;
+  
+}
+
+.features_image_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    margin-block-end: 2.5em;
+}
+
+.features_image_box img {
+    border-radius: 10px;
+}
+
+.features_sub_title {
+    margin-block-end: 1em;
+}
+
+.features_sub_title {
+    color: var(--color-base-primary);
+    line-height: 1.62;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-block-end: 1.5em;
+}
+
+.cta {
+    background-color: var(--color-neutral-mid);
+    background-image: url(./assets/images/mobile/image-footer.jpg);
+    background-size: cover;
+    padding: 5.75em 1.5em;
+    position: relative;
+    color: var(--color-neutral-light);
+}
+
+.cta p {
+    color: var(--color-neutral-light);
+    font-size: 18px;
+    line-height: 1.44;
+}
+
+.cta_download {
+    background-color: var(--color-base-secondary);
+    border-radius: 29px;
+    padding: 1em 2.5em;
+    display: block;
+    margin: 1em auto;
+    width: 75%;
 }
