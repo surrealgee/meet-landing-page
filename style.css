@@ -33,7 +33,9 @@ img {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 900;
 }
 
@@ -73,7 +75,7 @@ a span {
 }
 
 section {
-    padding: 0 1.5em;
+    padding: 1em 1.5em;
 }
 
 .hero {
@@ -102,6 +104,7 @@ section {
     display: block;
     margin: 1em auto;
     width: 75%;
+    min-width: 245px;
 }
 
 .main_more_info {
@@ -114,8 +117,36 @@ section {
 }
 
 .features {
-    padding-block: 14.65em 7.5em;
-  
+    padding-block: 12em 10em;
+    position: relative;
+}
+
+.features::after {
+    content: '01';
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 29px;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background-color: #FAFAFA;
+    top: 100px;
+    left: 42.66%;
+    color: var(--color-neutral-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 84px;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background-color: #FAFAFA;
+    top: 20px;
+    left: 49.87%;
+    color: var(--color-neutral-mid);
 }
 
 .features_image_box {
@@ -160,7 +191,7 @@ section {
 }
 
 .cta_overlay {
-    background-image: url(./assets/images/mobile/image-footer.jpg);   
+    background-image: url(./assets/images/mobile/image-footer.jpg);
     background-size: cover;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -181,4 +212,32 @@ section {
     display: block;
     margin: 1em auto;
     width: 75%;
+}
+
+.cta::after {
+    content: '02';
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 29px;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background-color: #FAFAFA;
+    top: -28px;
+    left: 42.66%;
+    color: var(--color-neutral-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 84px;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background-color: #FAFAFA;
+    top: -112px;
+    left: 49.87%;
+    color: var(--color-neutral-mid);
 }
