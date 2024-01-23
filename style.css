@@ -143,11 +143,29 @@ section {
 
 .cta {
     background-color: var(--color-neutral-mid);
-    background-image: url(./assets/images/mobile/image-footer.jpg);
+    /* background-image: url(./assets/images/mobile/image-footer.jpg); */
     background-size: cover;
-    padding: 5.75em 1.5em;
+    padding: 0;
     position: relative;
     color: var(--color-neutral-light);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cta_content {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 2;
+    padding: 6em 1.5em;
+}
+
+.cta_overlay {
+    background-image: url(./assets/images/mobile/image-footer.jpg);   
+    background-size: cover;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 100%;
+    opacity: 0.12;
 }
 
 .cta p {
