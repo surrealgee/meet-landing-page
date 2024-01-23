@@ -46,6 +46,8 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    max-width: 15ch;
+    margin: 0 auto;
 }
 
 h3 {
@@ -56,7 +58,8 @@ p {
     color: var(--color-neutral-mid);
     font-weight: 500;
     line-height: 1.62;
-    margin: 1.5em 0;
+    margin: 1.5em auto;
+    max-width: 50ch;
 }
 
 a {
@@ -94,30 +97,34 @@ section {
 }
 
 .main_title {
-    margin: 1.2em 0 0.6em;
+    margin: 1.2em auto 0.6em;
+    max-width: 10ch;
+}
+
+.main_btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
 
 .main_download {
     background-color: var(--color-base-primary);
     border-radius: 29px;
     padding: 1em 3em;
-    display: block;
-    margin: 1em auto;
-    width: 75%;
-    min-width: 245px;
+    flex: 2 1 auto;
 }
 
 .main_more_info {
     background-color: var(--color-base-secondary);
     border-radius: 29px;
     padding: 1em 1.75em;
-    display: block;
-    margin: 1em auto;
-    width: 60%;
+    flex: 1 1 auto;
 }
 
 .features {
-    padding-block: 12em 10em;
+    padding-block: 15em 13em;
     position: relative;
 }
 
@@ -130,7 +137,8 @@ section {
     border: 1px solid rgba(135, 135, 157, 0.25);
     background-color: #FAFAFA;
     top: 100px;
-    left: 42.66%;
+    left: 50%;
+    transform: translate(-50%);
     color: var(--color-neutral-mid);
     display: flex;
     align-items: center;
@@ -145,7 +153,8 @@ section {
     border: 1px solid rgba(135, 135, 157, 0.25);
     background-color: #FAFAFA;
     top: 20px;
-    left: 49.87%;
+    left: 50%;
+    transform: translate(-50%);
     color: var(--color-neutral-mid);
 }
 
@@ -212,6 +221,7 @@ section {
     display: block;
     margin: 1em auto;
     width: 75%;
+    max-width: 200px;
 }
 
 .cta::after {
@@ -223,7 +233,8 @@ section {
     border: 1px solid rgba(135, 135, 157, 0.25);
     background-color: #FAFAFA;
     top: -28px;
-    left: 42.66%;
+    left: 50%;
+    transform: translate(-50%);
     color: var(--color-neutral-mid);
     display: flex;
     align-items: center;
@@ -238,6 +249,50 @@ section {
     border: 1px solid rgba(135, 135, 157, 0.25);
     background-color: #FAFAFA;
     top: -112px;
-    left: 49.87%;
+    left: 50%;
+    transform: translate(-50%);
     color: var(--color-neutral-mid);
+}
+
+@media screen and (min-width: 680px) {
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.10;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        max-width: 15ch;
+        margin: 0 auto;
+    }
+
+    .main {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .main_btns {
+        flex-direction: row;
+        margin: 0 auto;
+    }
+/* 
+    .main_download {
+        width: 65%;
+    } */
+
+    .features_image_box {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+
+    .features_content,
+    .cta_content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .cta_overlay {
+        background-image: url(./assets/images/tablet/image-footer.jpg);
+    }
 }
