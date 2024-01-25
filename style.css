@@ -114,6 +114,7 @@ section {
     border-radius: 29px;
     padding: 1em 3em;
     flex: 2 1 auto;
+    max-width: 250px;
 }
 
 .main_more_info {
@@ -121,6 +122,7 @@ section {
     border-radius: 29px;
     padding: 1em 1.75em;
     flex: 1 1 auto;
+    max-width: 200px;
 }
 
 .features {
@@ -276,7 +278,8 @@ section {
         flex-direction: row;
         margin: 0 auto;
     }
-/* 
+
+    /* 
     .main_download {
         width: 65%;
     } */
@@ -294,5 +297,64 @@ section {
 
     .cta_overlay {
         background-image: url(./assets/images/tablet/image-footer.jpg);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    section {
+        margin: 3em 0 0;
+    }
+    
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        width: auto;
+        justify-content: space-between;
+        gap: 2.5em;
+        padding: 2.5em 0;
+    }
+
+    /* .main_content {
+        max-width: 540px;
+        justify-self: center;
+    } */
+
+    .main_image {
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .left {
+        background-image: url(./assets/images/desktop/image-hero-left.png);
+        background-position: left -18px center;
+    }
+
+    .right {
+        background-image: url(./assets/images/desktop/image-hero-right.png);
+        background-position: right -18px center;
+    }
+
+    .features_image_box {
+        padding-left: 11vw;
+        padding-right: 11vw;
+    }
+
+    .cta_overlay {
+        background-image: url(./assets/images/desktop/image-footer.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cta_content {
+        align-items: center;
+        display: flex;
+        gap: 1em;
+        text-align: left;
+    }
+
+
+    .cta_content p {
+        max-width: 30ch;
     }
 }
